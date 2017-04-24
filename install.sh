@@ -389,6 +389,7 @@ sudo mv /home/pi/Documents/ressource_download/Version-7---GTK---SQL---sauvegarde
 
 echo "Compilation du programme"
 cd /home/pi/Documents/onebee/
+ls
 sudo g++ -Wall -pthread -o onecounter camera.c -lpigpio -lrt -lwiringPi ` pkg-config --cflags --libs opencv gtk+-2.0` `mysql_config --cflags --libs`
 sleep 2;
 echo "Compilation terminée"
