@@ -407,3 +407,5 @@ echo "///                                              Realise par : Jean-Camill
 echo "///                                                               Mind  Microtec     ///"
 echo "////////////////////////////////////////////////////////////////////////////////////////"
 echo "  "
+
+sudo ./onecounter
