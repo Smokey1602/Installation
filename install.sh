@@ -388,7 +388,11 @@ echo "  "
 sudo service hostapd start
 sudo service dnsmasq start
 
+echo "Compilation du programme"
 sudo g++ -Wall -pthread -o light light.c -lpigpio -lrt -lwiringPi ` pkg-config --cflags --libs opencv`
+sleep 2;
+echo "Compilation terminée"
+sleep 5;
 
 clear 
 echo "////////////////////////////////////////////////////////////////////////////////////////"
