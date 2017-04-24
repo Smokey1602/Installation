@@ -379,13 +379,13 @@ echo "  "
 sudo service hostapd start
 sudo service dnsmasq start
 
-cd ..
+cd 
 cd /home/pi/Documents
 mkdir ressource_download
 cd ressource_download
 wget  https://github.com/Smokey1602/Version-7---GTK---SQL---sauvegardeUSB---initialisation---threads/archive/master.zip
 sudo unzip master.zip
-sudo mv /home/pi/Documents/ressource_download/Version-7---GTK---SQL---sauvegardeUSB---initialisation---threads/archive/master.zip /home/pi/Documents/onebee
+sudo mv /home/pi/Documents/ressource_download/Version-7---GTK---SQL---sauvegardeUSB---initialisation---threads-master/ /home/pi/Documents/onebee
 
 echo "Compilation du programme"
 sudo g++ -Wall -pthread -o onecounter camera.c -lpigpio -lrt -lwiringPi ` pkg-config --cflags --libs opencv gtk2.0+` `mysql_config --cflags --libs`
