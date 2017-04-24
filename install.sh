@@ -405,22 +405,3 @@ echo "///                                              Realise par : Jean-Camill
 echo "///                                                               Mind  Microtec     ///"
 echo "////////////////////////////////////////////////////////////////////////////////////////"
 echo "  "
-
-
-sudo chmod 777 /home/pi/bin/Launch_on_start
-
-
-sleep 9;
-echo "20secondes restantes"
-sleep 9 ;
-echo "10secondes restantes"
-sleep 9 ;
-echo "Affichage de la fenetre"
-sleep 3 ;
-cd /home/pi/bin/
-g++ -Wall -o initialisation initialisation.c `pkg-config --cflags --libs gtk+-2.0`
-sudo ./initialisation
-
-echo "Rédamarrage dans 10secondes..."
-echo "au prochain lancement, le programme se lancera automatiquement"
-sudo reboot
