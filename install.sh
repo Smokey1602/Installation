@@ -83,15 +83,6 @@ echo "..."
 sudo chmod -R 770 /var/www/
 
 #création de nos différents répertoires 
-echo "..."
-mkdir /home/pi/Documents/onebee
-echo "..."
-mkdir /home/pi/Documents/onebee/Sauvegarde
-echo "..."
-mkdir /home/pi/Documents/onebee/Sauvegarde/Fichier_csv
-echo "..."
-mkdir /home/pi/Documents/onebee/Sauvegarde/Graphiques
-echo "..."
 
 mkdir /var/www/Sauvegarde
 echo "..."
@@ -388,8 +379,15 @@ echo "  "
 sudo service hostapd start
 sudo service dnsmasq start
 
+cd ..
+cd /home/pi/Documents
+mkdir ressource_download
+cd ressource_download
+wget https://github.com/Smokey1602/Version-7---GTK---SQL---sauvegardeUSB---initialisation---threads/archive/master.zip
+sudo mv /home/pi/Documents/ressource_download/Version-7---GTK---SQL---sauvegardeUSB---initialisation---threads/archive/master.zip /home/pi/Documents/onebee
+
 echo "Compilation du programme"
-sudo g++ -Wall -pthread -o light light.c -lpigpio -lrt -lwiringPi ` pkg-config --cflags --libs opencv`
+sudo g++ -Wall -pthread -o onecounter camera.c -lpigpio -lrt -lwiringPi ` pkg-config --cflags --libs opencv gtk2.0+` `mysql_config --cflags --libs`
 sleep 2;
 echo "Compilation terminée"
 sleep 5;
