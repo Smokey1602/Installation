@@ -387,6 +387,7 @@ wget  https://github.com/Smokey1602/Version-7---GTK---SQL---sauvegardeUSB---init
 sudo unzip master.zip
 sudo mv /home/pi/Documents/ressource_download/Version-7---GTK---SQL---sauvegardeUSB---initialisation---threads-master/ /home/pi/Documents/onebee
 
+sudo chmod -R 777 /home/pi/Documents/onebee
 echo "Compilation du programme"
 cd /home/pi/Documents/onebee/
 ls
