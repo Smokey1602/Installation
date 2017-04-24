@@ -383,7 +383,8 @@ cd ..
 cd /home/pi/Documents
 mkdir ressource_download
 cd ressource_download
-wget https://github.com/Smokey1602/Version-7---GTK---SQL---sauvegardeUSB---initialisation---threads/archive/master.zip
+wget  https://github.com/Smokey1602/Version-7---GTK---SQL---sauvegardeUSB---initialisation---threads/archive/master.zip
+sudo unzip master-zip
 sudo mv /home/pi/Documents/ressource_download/Version-7---GTK---SQL---sauvegardeUSB---initialisation---threads/archive/master.zip /home/pi/Documents/onebee
 
 echo "Compilation du programme"
