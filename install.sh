@@ -396,6 +396,22 @@ sleep 2;
 echo "Compilation terminée"
 sleep 5;
 
+#configuration pour le lancement automatique au démarrage
+cd /home/pi/Desktop/
+sudo wget https://raw.githubusercontent.com/Smokey1602/Installation/master/OneCounter
+sudo chmod 777 OneCounter
+cd .config/lxsession/LXDE-pi
+
+sudo cat > autostart <<-"EOF"
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@xscreensaver -no-splash
+@point-rpi
+@./Desktop/OneCounter
+
+EOF
+
+
 clear 
 echo "////////////////////////////////////////////////////////////////////////////////////////"
 echo "///    Le module est maintenant fonctionnel. Il vous suffit d'effectuer une premiere ///"
