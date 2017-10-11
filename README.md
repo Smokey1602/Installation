@@ -17,4 +17,4 @@ Il ne restera plus qu'a brancher la raspberry a son module pour que son travail 
 Ce document sera fréquement mis à jour. Et son répertoire doté de la version la plus récente du projet.
 Ce dépôt est la pour effectuer une mise en place rapide de l'environnement 
 
-N'oubliez pas de rendre executable le ficher .sh (# sudo chmod 777 install.sh)
+N'oubliez pas de rendre executable le ficher .sh (**sudo chmod 777 install.sh**)
